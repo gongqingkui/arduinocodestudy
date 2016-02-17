@@ -35,7 +35,9 @@ void setup() {
 //  if(0 == gprs.connectTCP("gongqingkui.vicp.cc", 20597)) {
       Serial.println("connect mbed.org success");
   }else{
+
       Serial.println("connect error");
+//what fucking 
       while(1);
   }
 

@@ -5,8 +5,8 @@ Sketch: GPRS HTTP Test
 #include <gprs.h>
 #include <SoftwareSerial.h>
 
-char http_cmd[] = "GET /media/uploads/mbed_official/hello.txt HTTP/1.0\r\n\r\n";
-//char http_cmd[] = "GET /hello.txt HTTP/1.0\r\n\r\n";
+//char http_cmd[] = "GET /media/uploads/mbed_official/hello.txt HTTP/1.0\r\n\r\n";
+char http_cmd[] = "GET /hello.txt HTTP/1.0\r\n\r\n";
 char buffer[512];
 
 
@@ -31,8 +31,8 @@ void setup() {
   
   Serial.println("Init success, start to connect mbed.org...");
   
-  if(0 == gprs.connectTCP("mbed.org", 80)) {
-//  if(0 == gprs.connectTCP("gongqingkui.vicp.cc", 20597)) {
+  //if(0 == gprs.connectTCP("mbed.org", 80)) {
+  if(0 == gprs.connectTCP("gongqingkui.vicp.cc", 20597)) {
       Serial.println("connect mbed.org success");
   }else{
 

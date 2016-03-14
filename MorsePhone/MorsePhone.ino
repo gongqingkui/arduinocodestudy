@@ -54,11 +54,13 @@ Y ━ ．━ ━ Z ━ ━ ．．   　
 4 ．．．．━ 5 ．．．．． 6 ━ ．．．． 7 ━ ━ ．．． 
 8 ━ ━ ━ ．． 9 ━ ━ ━ ━ ．   */
 byte morse[]={6,17};
-byte num = 0;
+int num = 0;
+Serial.println(str);
 for(int i=4;i>=0;i--){
   if(str[i]=='*' && str[i-1]=='*')continue;
-  if(str[i]=='*' && str[i-1]!='*')num+=2^i;
-  if(str[i]=='-')num+=2^i;
+  if(str[i]=='*' && str[i-1]!='*')num+=pow(2,i);
+  if(str[i]=='-')num+=pow(2,i);
+  Serial.print("NUM"+num);
 }
 for(int i=0;i<25;i++){
   if(morse[i]==num){return 'a'+i;}

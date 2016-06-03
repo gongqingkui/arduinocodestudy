@@ -1,3 +1,12 @@
+/*gnd gnd 
+vcc 3.3v 
+ce 8
+csn 7
+csk 13
+mosi 11
+miso 12
+irq null
+*/
 #include <SPI.h>
 #include <Mirf.h>
 #include <nRF24L01.h>

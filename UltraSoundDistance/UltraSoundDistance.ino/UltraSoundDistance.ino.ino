@@ -1,5 +1,5 @@
-int inputPin = 4;//echo
-int outputPin = 5;//trig 
+int inputPin = 12;//echo
+int outputPin = 13;//trig 
 void setup(){
   Serial.begin(9600);
   pinMode(inputPin,INPUT);

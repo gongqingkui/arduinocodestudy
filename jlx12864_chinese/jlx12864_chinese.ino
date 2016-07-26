@@ -18,7 +18,7 @@ byte Rom_IN = 5; //字库 IC 接口定义:Rom_IN 就是字库 IC 的 SI
 byte Rom_OUT = 6; //字库 IC 接口定义:Rom_OUT 就是字库 IC 的 SO
 byte Rom_SCK = 7;  //字库 IC 接口定义:Rom_SCK 就是字库 IC 的 SCK
 byte Rom_CS = 8; //字库 IC 接口定义 Rom_CS 就是字库 IC 的 CS#
-byte key = 9; //定义一个按键
+
 #define uchar unsigned char
 #define uint unsigned int
 #define ulong unsigned long
@@ -37,13 +37,6 @@ void delay_us(int n_us)
   int j, k;
   for (j = 0; j < n_us; j++)
     for (k = 0; k < 1; k++);
-}
-//等待一个按键，我的主板是用 P2.0 与 GND 之间接一个按键
-void waitkey()
-{
-repeat:
-  if (key == 1) goto repeat;
-  else delay(600);
 }
 //写指令到 LCD 模块
 void transfer_command_lcd(int data1)

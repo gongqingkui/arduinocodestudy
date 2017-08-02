@@ -20,8 +20,9 @@ void loop() {
   while (Serial.available() > 0)
   { words = Serial.read();
     Mirf.send((byte *)&words);
-    Serial.println(words);
+    Serial.print(words);
     while (Mirf.isSending())
     { }
   }
+  //Serial.println();
 }
